@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CODE-IQ Hack Challenge</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <script src="https://kit.fontawesome.com/c472cc2087.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <span>CODE IQ - ICFAI Tech Hackathon Challenge</span>
+        </div>
+        <div class="controller">
+            <div class="controller-contain">
+                <div class="ctn-btn active" onclick="moveBar(this, 0);">
+                    <span>People Count</span>
+                </div>
+                <div class="ctn-btn" onclick="moveBar(this,1)">
+                    <span>High density Crowd prediction</span>
+                </div>
+                <div class="ctn-btn" onclick="moveBar(this, 3)">
+                    <span>Attribute Extraction</span>
+                </div>
+                <div class="ctn-btn" onclick="moveBar(this, 2)">
+                    <span>About</span>
+                </div>
+                <div class="moving-bar"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box1" id="box1">
+                <div class="box1-controller">
+                    <button class="box1-ctn-btn selected-btn" id="upload-btn">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_119_27)"/>
+                            <defs>
+                            <pattern id="pattern0_119_27" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_119_27" transform="scale(0.0111111)"/>
+                            </pattern>
+                            <image id="image0_119_27" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAABAlJREFUeF7t3EFrE1EQAOCZBFpt9q1HsfQfKHpT/AUieBE8CeJNT9aj7cVWD1pvil70JoJXBRX/gr216E+w4Dm7W2ghO/LKBmLNJpnJdjZvM7lm5k3m29mQ3SwPwV4qAqhSxYqAQSsNgUEbtJKAUhmbaINWElAqYxNt0EoCSmXEE01Ep7Isuw8AtwHgPBF1lD6zahlEzADgFxF9jKLoLSIeSD6ACHp/f3+l1+t9A4CLkqIB5+y22+0bS0tLv7k9sKH9JKdpuj2HyH3b3SiKrnAnmw2dpulDInrJPaINi191zr3m9CSB3iaiy5wiDYz94Zy7yumLDZ0kSQIAEadIA2NT55zj9CWBJk6BpsY651h2rGCPliSJQQOAQSudQgZt0EoCSmVsog1aSUCpjE20QSsJKJVp8kQfENFGq9V67y3zPL+LiE8AYFHJ9p8yTYU+JKJbcRx/Gew2TdNrRPQZAE5pYzcReihyH7Yu7KZBj0SuE7tJ0BMh14XdFGgWch3YTYAWIWtjhw49FbImdsjQlSBrYYcKXSmyBnaI0AetVutmp9P5XnbRkWXZ9bL3R73n1/Pv53n+qeoryNCgx05y/4LEOXd62IFIksRfmv931XjSV5AhQU80yf1pLGus+A+TtVYVl+vBQBPRWhzHL0Z9XQye8mOg/TJjsbvd7hoiPp8raEQ8F0XRn2FND7t/MQG0X2rcfZGzRDS0Jhc/mIkugy67STQh9EjsLMuW8zzf46IOiw8GmojW4zjeGmxi1C8EBnTp10i3211HxGdzBV2c5hvtdvvoRn6v1/M38jfLfoYxoY+wiWjz2Pr+j4KFeYNm9SuAZq3PDQ7mq6Oqxup6RM2guUdQGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumgZ0LXsqzdhzHV3n3BnOwWFv9eP3vKtjl7AZg1bZJWwVAF5xjmYVsTMG/cA594bTF3uiiWix2MnxEqfQtLEzBL1T7OR4yOmJDe0XL/Ym/QoAatgzAr1T7E3KfvRXBO2xi8m+V+y2e+GkNx2sEToFgJ8A4HfbfYeIrEnuT70YmnPaVBFb9jAj92dWFZ9FsoZBS9QEOQYtQJOkGLRETZBj0AI0SYpBS9QEOQYtQJOkGLRETZBj0AI0SYpBS9QEOQYtQJOkGLRETZATErS/Y7Z8rMc959yKoG/1lGCg0zTdIqJHg0KIuBVF0bq6mqBgMNBEtJBl2VMiuuP7RMQPnU7nsfS2pcBqqpRgoKfqcgaSDVrpIBi0EvRfzpMbiNMdla8AAAAASUVORK5CYII="/>
+                            </defs>
+                            </svg>
+                    </button>
+                    <button class="box1-ctn-btn" id="ip-btn">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_119_46)"/>
+                            <defs>
+                            <pattern id="pattern0_119_46" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_119_46" transform="scale(0.0111111)"/>
+                            </pattern>
+                            <image id="image0_119_46" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR4nO3cXWpTQRjG8emF0Zv6cVldgl2BH9S6BUVdgrRVcQ+K1VaXoS5CsQi2Clp1CWpV0AuVFJSK/cvIBEJJcr7mncQzz+8mkBTe9zyZ5Ewnc45zIiIiIiIiIiIiIiIiUhOwH7gCPAe2aZdtYANYAjpuXIBjwBvysAkcHddIziXknlfJRzZwlTwtpg76BXnaSB10lzx1UwedLWeT5wHgJvAJ+Ags/zsfkDEXP+QjwNMBpZYVdCR+ygi8HfKeflbQEQCzwPuRnx4y5uKEPA98L6xFxlzzkM8BP0vVImOuWcjXgD+la5ExVy/gKeB25VpkzNVbF3pQqxYZc9VCPgys1a5Fxly1OXKjFU4FXQA4XjRHnsSgvwArwBww49cAwuNceN6/nkyJkM8A36LUIo3dsLgyXXBg08Cd8PfmCnq5CPyKVgt7O8D5otGz5yAvAL+tGxtR/3qVOXKpWti7XCXkvoNdtG5sRO34tbD1pE7IPcAjy+bcECa1sHXCNQCcsmyuLUFv+X9XGwY9BXywarAtQd9vEnIP8NCqQTeESS3srLgIgFWrBtsS9GqkoO9aNdiWoPXV0UcnwwH4D6d3J10DwGnL5kbUjV8LW2sNg35s2VybgvYWJnXzZduC3vGLRBVDvqRFpXp2w3z4YEHAh4B7WiZt7muYF8+Hn4c64fFseN6/nkwbF/4nUoWfst41rkXGXPlzhv/UvW5Ui4y5CrTdIFHQIWxtoEkRdAhbW8JSBN0XuDY5pgg6hK1tuymCDmFrI3qKoMtuG9P0LpKCjZBbCjrN5W+3FLTNBZ03Bl3Qmeslyj9ih1z0DvgboeRoPXXQ/q4sOVpIHXQn3JUlJy+BfUmD7puabGYU8kzykPeMbL8neb2FJ8gu8Mx/XYxlJIuIiIiIiIiIiIiIiIir7i9Yo0FGWbldXQAAAABJRU5ErkJggg=="/>
+                            </defs>
+                            </svg>                            
+                    </button>
+                </div>
+                <div class="box1-content">
+                    <div class="upload-box" id="upload-box">
+                        <div class="upload-popup" id="upload-popup">
+                            <form id="upload-form">
+                                <input type="file" id="file-input" >
+                                <label for="file-input">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </label>
+                                <span id="file-name"></span>
+                                <button type="submit">Enter</button>
+                                <span id="upload-status"></span>
+                            </form>
+                        </div>
+                        <div class="ip-content-box" id="upload-content-box">
+                            <div class='ip-camera-display' id="upload-camera">
+                                <img id="videoFeed_file" style="height:100%;width:100%;object-fit: contain;outline: none;border: none;">
+                            </div>
+                            <div class="with-cancel">
+                                <div class="ip-count-display">
+                                    <span>people in the frame:</span>
+                                    <span id="upload_total_change_number">0</span>  
+                                </div>
+                                <div class="ip-count-display">
+                                    <span>total number of people: </span>
+                                    <span id="upload_change_number">0</span>  
+                                </div>
+                                <button id="cancel-upload">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ip-box" id="ip-box">
+                        <div class="ip-popup" id="ip-popup">
+                            <form id="ip-form">
+                                <input type="text" id="ip-input" placeholder="Enter the ip-address here: ">
+                                <input type="number" id="ip-port" placeholder="Enter the port number here: ">
+                                <button type="submit">Enter</button>
+                                <p id="status"></p>
+                            </form>
+                        </div>
+                        <div class="ip-content-box" id="ip-content-box">
+                            <div class='ip-camera-display' id="ip-camera">
+                                <img id="videoFeed" style="height:100%;width:100%;object-fit: contain;outline: none;border: none;">
+                            </div>
+                            <div class="with-cancel">
+                                <div class="ip-count-display">
+                                    <span>people in the frame:</span>
+                                    <span id="total_change_number">0</span>  
+                                </div>
+                                <div class="ip-count-display">
+                                    <span>total number of people: </span>
+                                    <span id="change_number">0</span>  
+                                </div>
+                                <button id="cancel-ip">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2" id="box2">
+                <div class="upload-box" id="upload-box" >
+                    <div class="upload-popup" id="high-density-upload-popup" >
+                        <form id="high-density-upload-form">
+                            <input type="file" id="high-density-file-input" >
+                            <label for="high-density-file-input">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </label>
+                            <span id="high-density-file-name"></span>
+                            <button type="submit">Enter</button>
+                            <span id="high-density-upload-status"></span>
+                        </form>
+                    </div>
+                    <div class="ip-content-box" id="high-density-upload-content-box" >
+                        <div class='ip-camera-display' id="upload-camera">
+                            <img id="high_density_Feed_file" style="height:500px;width:500px;object-fit: contain;outline: none;border: none;">
+                        </div>
+                        <div class='ip-camera-display' id="upload-camera">
+                            <img id="high_density_Feed_file1" style="height:500px;width:500px;object-fit: contain;outline: none;border: none;">
+                        </div>
+                        <div class="with-cancel">
+                            <div class="ip-count-display">
+                                <span>Predicted Crowd Counting: </span>
+                                <span id="high-density-change-number">0</span>  
+                            </div>
+                            <button id="high-denstiy-cancel-upload">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box4" id="box4">
+                <div class="box4-inner" id="box4-inner" >
+                    <div class="btn-box">
+                        <form id="attr-upload-form">
+                            <input type="file" id="file-attr-input" style="display: none;" accept="image/**">
+                                <label for="file-attr-input">
+                                    <svg width="100%" height="100%" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="50" height="50" fill="url(#pattern0_119_27)"/>
+                                        <defs>
+                                        <pattern id="pattern0_119_27" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_119_27" transform="scale(0.0111111)"/>
+                                        </pattern>
+                                        <image id="image0_119_27" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAABAlJREFUeF7t3EFrE1EQAOCZBFpt9q1HsfQfKHpT/AUieBE8CeJNT9aj7cVWD1pvil70JoJXBRX/gr216E+w4Dm7W2ghO/LKBmLNJpnJdjZvM7lm5k3m29mQ3SwPwV4qAqhSxYqAQSsNgUEbtJKAUhmbaINWElAqYxNt0EoCSmXEE01Ep7Isuw8AtwHgPBF1lD6zahlEzADgFxF9jKLoLSIeSD6ACHp/f3+l1+t9A4CLkqIB5+y22+0bS0tLv7k9sKH9JKdpuj2HyH3b3SiKrnAnmw2dpulDInrJPaINi191zr3m9CSB3iaiy5wiDYz94Zy7yumLDZ0kSQIAEadIA2NT55zj9CWBJk6BpsY651h2rGCPliSJQQOAQSudQgZt0EoCSmVsog1aSUCpjE20QSsJKJVp8kQfENFGq9V67y3zPL+LiE8AYFHJ9p8yTYU+JKJbcRx/Gew2TdNrRPQZAE5pYzcReihyH7Yu7KZBj0SuE7tJ0BMh14XdFGgWch3YTYAWIWtjhw49FbImdsjQlSBrYYcKXSmyBnaI0AetVutmp9P5XnbRkWXZ9bL3R73n1/Pv53n+qeoryNCgx05y/4LEOXd62IFIksRfmv931XjSV5AhQU80yf1pLGus+A+TtVYVl+vBQBPRWhzHL0Z9XQye8mOg/TJjsbvd7hoiPp8raEQ8F0XRn2FND7t/MQG0X2rcfZGzRDS0Jhc/mIkugy67STQh9EjsLMuW8zzf46IOiw8GmojW4zjeGmxi1C8EBnTp10i3211HxGdzBV2c5hvtdvvoRn6v1/M38jfLfoYxoY+wiWjz2Pr+j4KFeYNm9SuAZq3PDQ7mq6Oqxup6RM2guUdQGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumkFzxYTxBi2E46YZNFdMGG/QQjhumgZ0LXsqzdhzHV3n3BnOwWFv9eP3vKtjl7AZg1bZJWwVAF5xjmYVsTMG/cA594bTF3uiiWix2MnxEqfQtLEzBL1T7OR4yOmJDe0XL/Ym/QoAatgzAr1T7E3KfvRXBO2xi8m+V+y2e+GkNx2sEToFgJ8A4HfbfYeIrEnuT70YmnPaVBFb9jAj92dWFZ9FsoZBS9QEOQYtQJOkGLRETZBj0AI0SYpBS9QEOQYtQJOkGLRETZBj0AI0SYpBS9QEOQYtQJOkGLRETZATErS/Y7Z8rMc959yKoG/1lGCg0zTdIqJHg0KIuBVF0bq6mqBgMNBEtJBl2VMiuuP7RMQPnU7nsfS2pcBqqpRgoKfqcgaSDVrpIBi0EvRfzpMbiNMdla8AAAAASUVORK5CYII="/>
+                                        </defs>
+                                    </svg>
+                                </label>
+                            <span id="attr-upload-status"></span>
+                            <span id="file-attr-name"></span>
+                            <span> Generate by uploading image</span>
+                            <button type="submit">Enter</button>
+                        </form>
+                    </div>
+                    <div class="btn-box" >
+                        <div class="description-image">
+                            <svg width="100%" height="100%" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="96" height="96" fill="url(#pattern0_132_67)"/>
+                                <defs>
+                                <pattern id="pattern0_132_67" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_132_67" transform="scale(0.0104167)"/>
+                                </pattern>
+                                <image id="image0_132_67" width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADBElEQVR4nO2dy4oTQRiFW8HLi7hRfAl3wsy8hQvFrTthXsBbvPU5pZD9PIAIig+hzmuIOoKKl5aCDobQE9JJdf11OR/8y0nXf77qqk6nk2kaERzn3DWSxyQ/A3g2m80uhD+KGITkdQDfSXaLAvB6Pp9fHP4LETR8kj+Ww5eEBMKXhATCl4SJaNv2EoCfm4S/JOGVNuaAALgzRoA25gkAcHesBJJPpxhLtWC8hE/WY84OkgckZ13XnQkg4X38DjIPH/833HYXCf51/Dvm+F2Udan54vDw8OzYjbmXeBBqYFf9KQngI4BvW2xEXewC8JfkrS1n/mqNOhP86wDY3zl4fx1L8jnJP9aB0i78URJCh//OOkymEf5GEkIvO23p4QPY3+IdLk6T4N8xh1zzi152sEX4m0gIJWCWYfi3p7ixtqZennZ1FELAcQrBMrGZP3DsJ1MJOLEOlunO/MWxw224AwM1D5e1hp+DAJQcfuoCUHr4/aDNg2at4fcDNw+btYbfD948cNYaft+AeeisNfy+CfPgWWv4fSNrB9ckCEsJP0cBLCn83ASwtPBzEsCBp5SzDz8XASw1/BwEOOf2At5S9o+O7G167DG3vosUQMOZ75y74S+NqxXABMKP0n+KAphI+FUKYELhVykAdhvuzdXwqxTARGa+BDBe+Ouei2qmpqQzACOXHc9pM18COO3M9/gn3swnoPkAVoix7CyQgAFihe+RgAFihe+RgAFihe+RgAFihe+RAGMkwBgJMEYCjJEAYyTAGAkwRgKMkQBjJMAYCTBGAozx3343/zzEfACGSIAxEmCMBBgjAcZIgDESYIwEGCMBxkiAMRJgjAQYIwHGSIAxEmCMBBiThAAAX3f5WlDh9WVyATn9dDHj14cYAh4m0GiXaN2bXIBz7gqA3wk026VUPpO2bS83MfC/DG7dMBMrAI+aWBwdHZ0n+da6aSZSAN6QPBdNwJKEx5UvR7/8zI8e/sCe8MBfAeTyvwW4W530vd6PtuYLIYQQQgghhBBCiKYE/gHkEhbYwDq5dwAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span>Generate by enter your description</span>
+                        <button id="description-entry">Enter</button>
+                    </div>
+                </div>
+                <div class="box4-result" id="box4-result" style="display: none;">
+                    <div class="box4-result-contain" >
+                        <div class="box4-image-display" id="result-image-display">
+                            <img id="box4-result-img" src="">
+                        </div>
+                        <div class="box4-enter-description" id="box4-enter-description">
+                            <div style="width: 100%;">Description</div>
+                            <div class="text-entry">
+                                
+                                <textarea placeholder="Enter your description here" id="get-description"></textarea>
+                            </div>
+                            <div class="btns">
+                                <button id="go-back">Back</button>
+                                <button style="background-color: green;" id="des-submit">Enter</button>
+                            </div>
+                        </div>
+                        <div class="box4-description " id="input-description">
+                            <div style="font-weight: 700;">Generated</div>
+                            <span id="des-result">
+                                
+                            </span>
+                        </div>
+                    </div>
+                    <button class="generate" id="generate">Generate</button>
+                </div>
+            </div>
+            <div class="box3" id="box3">
+                <div class="team-title"><span>TEAM CODE BLENDERS</span></div>
+                <div class="team-details">
+                    <div class="member-template">
+                        <div class="mem-img"><img src="../static/img/sabari.jpeg"></div>
+                        <div class="description">
+                            <span>Team Leader</span>
+                            <span>Sabari Vadivelan S</span>
+                        </div>
+                    </div>
+                    <div class="member-template">
+                        <div class="mem-img"><img src="../static/img/kamal.jpeg"></div>
+                        <div class="description">
+                            <span>Team Member:</span>
+                            <span>Kamal M</span>
+                        </div>
+                    </div>
+                    <div class="member-template">
+                        <div class="mem-img"><img src="../static/img/ulogo.jpg"></div>
+                        <div class="description">
+                            <span>Team Member:</span>
+                            <span>Uvarajan D</span>
+                        </div>
+                    </div>
+                    <div class="member-template">
+                        <div class="mem-img"><img src="../static/img/kavi.png"></div>
+                        <div class="description">
+                            <span>Team Member:</span>
+                            <span>Kaviarasu </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+console.log("script connected");
+let ws;
+let ws2;
+let uploadBox=document.getElementById('upload-box');
+let ipBox=document.getElementById('ip-box');
+
+function initializeBar() {
+    const firstButton = document.querySelector('.ctn-btn'); // Select the first button
+    firstButton.click(); // Simulate a click to position the bar
+}
+
+function toggleButtonSelection(selectedButton) {
+    // Remove 'selected-btn' class from both buttons
+    document.getElementById('upload-btn').classList.remove('selected-btn');
+    document.getElementById('ip-btn').classList.remove('selected-btn');
+    
+    // Add 'selected-btn' class to the clicked button
+    selectedButton.classList.add('selected-btn');
+    
+}
+
+document.getElementById('file-attr-input').addEventListener('change', function() {
+    const file = this.files[0];
+    const fileNameDisplay = document.getElementById('file-attr-name');
+    
+    if (file) {
+        fileNameDisplay.innerText = file.name; // Display selected file name
+    } else {
+        fileNameDisplay.innerText = "No file selected";
+    }
+});
+
+
+document.getElementById('attr-upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+
+    const fileInput = document.getElementById('file-attr-input');
+    let file = fileInput.files[0];
+    const statusUpload = document.getElementById('attr-upload-status');
+    const fileNameDisplay = document.getElementById("file-attr-name");
+
+    if (!file) {
+        console.log(file);
+        statusUpload.innerText = "Please select a file to upload.";
+        return;
+    }
+
+    statusUpload.innerText = "Uploading...";
+    
+    // Modify filename to replace spaces with underscores
+    const modifiedFileName = file.name.replace(/\s+/g, '_');
+    const modifiedFile = new File([file], modifiedFileName, { type: file.type });
+
+    const formData = new FormData();
+    formData.append('file', modifiedFile);
+
+    fetch('http://127.0.0.1:8000/upload_file', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            let box4=document.getElementById('box4-inner');
+            box4.style.display='none';
+            let box4result=document.getElementById('box4-result');
+            box4result.style.display="flex";
+            let box4ImageDisplay=document.getElementById("result-image-display");
+            box4ImageDisplay.style.display='flex';
+            let box4DesOutput=document.getElementById("box4-enter-description");
+            box4DesOutput.style.display="none";
+            let boxDesOutput=document.getElementById("input-description");
+            boxDesOutput.style.display="flex";
+            const imageFormats = /\.(jpg|jpeg|png|gif|bmp|tiff|svg|webp)$/i;
+            if (imageFormats.test(modifiedFile.name)) {
+                console.log("Image file found");
+                ws2 = new WebSocket("ws://127.0.0.2:8001/attr_image_file");
+                ws2.onmessage = event => {
+                    // Parse the received data
+                    const msg = JSON.parse(event.data);
+                    console.log(msg);
+                    let resultText;
+                    // Clean the extracted attributes by removing leading asterisks from both keys and values
+                    const cleanedData = Object.fromEntries(
+                        Object.entries(msg.total_entered).map(([key, value]) => [
+                            key.replace(/^\*+/g, '').trim(),  // Remove leading '*' characters from the key
+                            value.trim()                      // Ensure there are no extra spaces in the value
+                        ])
+                    );
+
+                    // Format the cleaned data for display
+                    // let resultText = "Extracted Attributes:\n";  // Starting text
+                    for (const [key, value] of Object.entries(cleanedData)) {
+                        resultText += `${key}: ${value}\n`;  // Format each key-value pair
+                    }
+
+                    // Update the image and the description result
+                    document.getElementById("box4-result-img").src = 'data:image/jpeg;base64,' + msg.frame;  // Set the image source
+                    document.getElementById("des-result").innerText = resultText;  // Set the cleaned description
+                };
+
+                ws2.onclose = () => {
+                    console.log("WebSocket connection closed");
+                    document.getElementById("videoFeed_file").src = '';
+                };
+                ws2.onerror = error => console.error("WebSocket error:", error);
+            } 
+
+            // statusUpload.innerText = 'Upload successful!';
+            fileInput.value = ""; // Clear input after successful upload
+            file='';
+            fileNameDisplay.textContent="";
+            // document.getElementById('upload-popup').style.display = 'none';
+            // document.getElementById('upload-content-box').style.display = 'flex';
+              
+            
+        statusUpload.innerText = '';
+        } else {
+            statusUpload.innerText = 'Upload failed.';
+            fileInput.value = ""; // Clear input after failed upload
+            fileNameDisplay.textContent="";
+        }
+    })
+    .catch(error => {
+        console.error("Upload error:", error);
+        statusUpload.innerText = 'Error during upload.';
+        fileNameDisplay.textContent="";
+    });
+});
+
+
+document.getElementById("des-submit").addEventListener('click',function(event){
+    event.preventDefault();
+    let content=document.getElementById("get-description").value;
+    console.log(content);
+    fetch('http://127.0.0.1:8000/start_text_description', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ content:content })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Start WebSocket connection
+                    // statusText.innerText = "Connected";
+                    // document.getElementById('ip-popup').style.display='none';
+                    // document.getElementById('ip-content-box').style.display='flex';
+                    ws = new WebSocket("ws://127.0.0.2:8001/attr_text");
+
+
+                    ws.onmessage = event => {
+                        // Display the received video frame
+                        const msg=JSON.parse(event.data);
+                        console.log(msg);
+                        // document.getElementById("videoFeed").src = 'data:image/jpeg;base64,' + msg.frame;
+                        // document.getElementById("change_number").innerText=msg.total_entered;
+                        const totalEntered = msg.total_entered;
+
+                        // Prepare a string to display
+                        let displayContent = "";
+
+                        // Check if total_entered is an object and display its properties
+                        if (typeof totalEntered === 'object') {
+                            for (let key in totalEntered) {
+                                if (totalEntered.hasOwnProperty(key)) {
+                                    displayContent += `<strong>${key}:</strong> ${totalEntered[key]}<br>`;
+                                }
+                            }
+                        }
+                        document.getElementById("des-result").innerHTML = displayContent;
+
+                    };
+
+                    ws.onclose = () => {
+                        console.log("WebSocket connection closed");
+                        // document.getElementById("videoFeed").src = '';
+                    };
+                    ws.onerror = error => console.error("WebSocket error:", error);
+                }
+            })
+            .catch(error => {
+                console.error("Error in fetch request:", error);
+                statusText.innerText = "Error: Could not connect";
+            });
+});
+
+document.getElementById('description-entry').addEventListener('click',function(event){
+    event.preventDefault();
+    let box4=document.getElementById('box4-inner');
+    box4.style.display='none';
+    let box4result=document.getElementById('box4-result');
+    box4result.style.display="flex";
+    let box4ImageDisplay=document.getElementById("result-image-display");
+    box4ImageDisplay.style.display='none';
+    let box4DesOutput=document.getElementById("input-description");
+    box4DesOutput.style.display="flex";
+    let bo4DesOutput=document.getElementById("box4-enter-description");
+    bo4DesOutput.style.display="flex";
+});
+
+let result=document.getElementById("des-result")
+// result.innerHTML="";
+let des=document.getElementById("get-description");
+// des.textContent='';
+
+document.getElementById('go-back').addEventListener('click',function(event){
+    event.preventDefault();
+    let box4=document.getElementById('box4-inner');
+    box4.style.display='flex';
+    let box4result=document.getElementById('box4-result');
+    box4result.style.display="none";
+    result.innerHTML="";
+    des.textContent='';
+});
+
+document.getElementById('generate').addEventListener('click',function(event){
+    event.preventDefault();
+    let box4=document.getElementById('box4-inner');
+    box4.style.display='flex';
+    let box4result=document.getElementById('box4-result');
+    box4result.style.display="none";
+    result.innerHTML="";
+    des.textContent='';
+});
+
+document.getElementById('ip-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let ip = document.getElementById('ip-input').value;
+            let port = document.getElementById('ip-port').value;
+            let statusText = document.getElementById('status');
+            statusText.innerText = "Connecting...";
+            fetch('http://127.0.0.1:8000/start_stream', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ip: ip, port: port })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Start WebSocket connection
+                    statusText.innerText = "Connected";
+                    document.getElementById('ip-popup').style.display='none';
+                    document.getElementById('ip-content-box').style.display='flex';
+                    ws = new WebSocket("ws://127.0.0.2:8001/stream_video");
+
+
+                    ws.onmessage = event => {
+                        // Display the received video frame
+                        const msg=JSON.parse(event.data);
+                        document.getElementById("videoFeed").src = 'data:image/jpeg;base64,' + msg.frame;
+                        document.getElementById("change_number").innerText=msg.total_entered;
+                        document.getElementById("total_change_number").innerText=msg.current_in_frame;
+                        
+                    };
+
+                    ws.onclose = () => {
+                        console.log("WebSocket connection closed");
+                        document.getElementById("videoFeed").src = '';
+                    };
+                    ws.onerror = error => console.error("WebSocket error:", error);
+                }
+            })
+            .catch(error => {
+                console.error("Error in fetch request:", error);
+                statusText.innerText = "Error: Could not connect";
+            });
+        });
+
+document.getElementById('cancel-ip').addEventListener('click',function(event){
+    event.preventDefault();
+    let statusText = document.getElementById('status');
+    let a=document.getElementById('ip-input');
+    a.value="";
+    let b=document.getElementById('ip-port');
+    b.value="";
+    if(ws){
+        ws.close();
+        statusText.innerText = "";
+        document.getElementById('ip-popup').style.display='block';
+        document.getElementById('ip-content-box').style.display='none';
+    }
+   
+});
+
+document.getElementById('upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+
+    const fileInput = document.getElementById('file-input');
+    let file = fileInput.files[0];
+    const statusUpload = document.getElementById('upload-status');
+    const fileNameDisplay = document.getElementById("file-name");
+
+    if (!file) {
+        console.log(file);
+        statusUpload.innerText = "Please select a file to upload.";
+        return;
+    }
+
+    statusUpload.innerText = "Uploading...";
+    
+    // Modify filename to replace spaces with underscores
+    const modifiedFileName = file.name.replace(/\s+/g, '_');
+    const modifiedFile = new File([file], modifiedFileName, { type: file.type });
+
+    const formData = new FormData();
+    formData.append('file', modifiedFile);
+
+    fetch('http://127.0.0.1:8000/upload_file', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            const imageFormats = /\.(jpg|jpeg|png|gif|bmp|tiff|svg|webp)$/i;
+            const videoFormats = /\.(mp4|mov|avi|mkv|flv|wmv|webm|m4v)$/i;
+            if (imageFormats.test(modifiedFile.name)) {
+                console.log("Image file found");
+                ws2 = new WebSocket("ws://127.0.0.2:8001/stream_image_file");
+                ws2.onmessage = event => {
+                    // Display the received video frame
+                    const msg=JSON.parse(event.data);
+                    console.log(msg);
+                    document.getElementById("videoFeed_file").src = 'data:image/jpeg;base64,' + msg.frame;
+                    document.getElementById("upload_change_number").innerText=msg.total_entered;
+                    document.getElementById("upload_total_change_number").innerText=msg.current_in_frame;
+                    
+                };
+
+                ws2.onclose = () => {
+                    console.log("WebSocket connection closed");
+                    document.getElementById("videoFeed_file").src = '';
+                };
+                ws2.onerror = error => console.error("WebSocket error:", error);
+            } 
+            if (videoFormats.test(modifiedFile.name)) {
+                console.log("Video file found");
+                ws2 = new WebSocket("ws://127.0.0.2:8001/stream_video_file");
+                ws2.onmessage = event => {
+                    // Display the received video frame
+                    const msg=JSON.parse(event.data);
+                    console.log(msg);
+                    document.getElementById("videoFeed_file").src = 'data:image/jpeg;base64,' + msg.frame;
+                    document.getElementById("upload_change_number").innerText=msg.total_entered;
+                    document.getElementById("upload_total_change_number").innerText=msg.current_in_frame;
+                    
+                };
+                ws2.onclose = () => {
+                    statusUpload.innerText = "";
+                    console.log("WebSocket connection closed");
+                    document.getElementById("videoFeed_file").src = '';
+                };
+                ws2.onerror = error => console.error("WebSocket error:", error);
+            }
+            statusUpload.innerText = 'Upload successful!';
+            fileInput.value = ""; // Clear input after successful upload
+            file='';
+            document.getElementById('upload-popup').style.display = 'none';
+            document.getElementById('upload-content-box').style.display = 'flex';
+              
+            
+            
+        } else {
+            statusUpload.innerText = 'Upload failed.';
+            fileInput.value = ""; // Clear input after failed upload
+        }
+    })
+    .catch(error => {
+        console.error("Upload error:", error);
+        statusUpload.innerText = 'Error during upload.';
+    });
+});
+
+document.getElementById('cancel-upload').addEventListener('click', function(event) {
+    event.preventDefault();
+    const fileInput = document.getElementById('file-input');
+    
+    
+    // Clear the file input and reset status and filename display
+    if(ws2){
+        ws2.close();
+        // statusText.innerText = "";
+        document.getElementById('upload-popup').style.display = 'block';
+        document.getElementById('upload-content-box').style.display = 'none';
+        fileInput.value = "";
+        document.getElementById('upload-status').innerText = "";
+        document.getElementById("file-name").innerText = "No file selected";
+    }
+    
+});
+
+document.getElementById('high-density-upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+
+    const fileInput = document.getElementById('high-density-file-input');
+    let file = fileInput.files[0];
+    const statusUpload = document.getElementById('high-density-upload-status');
+    const fileNameDisplay = document.getElementById("high-density-file-name");
+
+    if (!file) {
+        console.log(file);
+        statusUpload.innerText = "Please select a file to upload.";
+        return;
+    }
+
+    statusUpload.innerText = "Uploading...";
+    
+    // Modify filename to replace spaces with underscores
+    const modifiedFileName = file.name.replace(/\s+/g, '_');
+    const modifiedFile = new File([file], modifiedFileName, { type: file.type });
+
+    const formData = new FormData();
+    formData.append('file', modifiedFile);
+
+    fetch('http://127.0.0.1:8000/upload_file', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            const imageFormats = /\.(jpg|jpeg|png|gif|bmp|tiff|svg|webp)$/i;
+            const videoFormats = /\.(mp4|mov|avi|mkv|flv|wmv|webm|m4v)$/i;
+            if (imageFormats.test(modifiedFile.name)) {
+                console.log("Image file found");
+                ws2 = new WebSocket("ws://127.0.0.2:8001/stream_high_density_image_file");
+                ws2.onmessage = event => {
+                    // Display the received video frame
+                    const msg=JSON.parse(event.data);
+                    console.log(msg);
+                    document.getElementById("high_density_Feed_file").src = 'data:image/jpeg;base64,' + msg.frame1;
+                    document.getElementById("high_density_Feed_file1").src = 'data:image/jpeg;base64,' + msg.frame2;
+                    document.getElementById("high-density-change-number").innerText=msg.total_entered;
+                    //document.getElementById("upload_total_change_number").innerText=msg.current_in_frame;
+                    
+                };
+
+                ws2.onclose = () => {
+                    console.log("WebSocket connection closed");
+                    document.getElementById("high_density_Feed_file").src = '';
+                    document.getElementById("high_density_Feed_file1").src = '';
+                };
+                ws2.onerror = error => console.error("WebSocket error:", error);
+            } 
+            if (videoFormats.test(modifiedFile.name)) {
+                console.log("Video file found");
+                ws2 = new WebSocket("ws://127.0.0.2:8001/stream_video_file");
+                ws2.onmessage = event => {
+                    // Display the received video frame
+                    const msg=JSON.parse(event.data);
+                    console.log(msg);
+                    document.getElementById("videoFeed_file").src = 'data:image/jpeg;base64,' + msg.frame;
+                    document.getElementById("upload_change_number").innerText=msg.total_entered;
+                    document.getElementById("upload_total_change_number").innerText=msg.current_in_frame;
+                    
+                };
+                ws2.onclose = () => {
+                    console.log("WebSocket connection closed");
+                    document.getElementById("high_density_Feed_file").src = '';
+                };
+                ws2.onerror = error => console.error("WebSocket error:", error);
+            }
+            statusUpload.innerText = 'Upload successful!';
+            fileInput.value = ""; // Clear input after successful upload
+            file='';
+            document.getElementById('high-density-upload-popup').style.display = 'none';
+            document.getElementById('high-density-upload-content-box').style.display = 'flex';
+              
+            
+            
+        } else {
+            statusUpload.innerText = 'Upload failed.';
+            fileInput.value = ""; // Clear input after failed upload
+        }
+    })
+    .catch(error => {
+        console.error("Upload error:", error);
+        statusUpload.innerText = 'Error during upload.';
+    });
+});
+
+document.getElementById('high-denstiy-cancel-upload').addEventListener('click', function(event) {
+    event.preventDefault();
+    const fileInput = document.getElementById('high-density-file-input');
+    
+    
+    // Clear the file input and reset status and filename display
+    if(ws2){
+        ws2.close();
+        // statusText.innerText = "";
+        document.getElementById('high-density-upload-popup').style.display = 'block';
+        document.getElementById('high-density-upload-content-box').style.display = 'none';
+        fileInput.value = "";
+        document.getElementById('high-density-upload-status').innerText = "";
+        document.getElementById("high-density-file-name").innerText = "No file selected";
+    }
+    
+});
+
+document.getElementById('high-density-file-input').addEventListener('change', function() {
+    const file = this.files[0];
+    const fileNameDisplay = document.getElementById('high-density-file-name');
+    
+    if (file) {
+        fileNameDisplay.innerText = file.name; // Display selected file name
+    } else {
+        fileNameDisplay.innerText = "No file selected";
+    }
+});
+
+document.getElementById('file-input').addEventListener('change', function() {
+    const file = this.files[0];
+    const fileNameDisplay = document.getElementById('file-name');
+    
+    if (file) {
+        fileNameDisplay.innerText = file.name; // Display selected file name
+    } else {
+        fileNameDisplay.innerText = "No file selected";
+    }
+});
+
+document.getElementById('upload-btn').addEventListener('click', function() {
+    toggleButtonSelection(this);
+    uploadBox.scrollIntoView({ behavior: 'smooth' });
+    if(ws2){
+        ws2.close();
+        const fileInput = document.getElementById('file-input');
+        // statusText.innerText = "";
+        document.getElementById('upload-popup').style.display = 'block';
+        document.getElementById('upload-content-box').style.display = 'none';
+        fileInput.value = "";
+        document.getElementById('upload-status').innerText = "";
+        document.getElementById("file-name").innerText = "No file selected";
+    }
+    if(ws){
+        let statusText = document.getElementById('status');
+        let a=document.getElementById('ip-input');
+        a.value="";
+        let b=document.getElementById('ip-port');
+        b.value="";
+        ws.close();
+        statusText.innerText = "";
+        document.getElementById('ip-popup').style.display='block';
+        document.getElementById('ip-content-box').style.display='none';
+    }
+});
+
+document.getElementById('ip-btn').addEventListener('click', function() {
+    toggleButtonSelection(this);
+    ipBox.scrollIntoView({ behavior: 'smooth' });
+    if(ws2){
+        ws2.close();
+        const fileInput = document.getElementById('file-input');
+        // statusText.innerText = "";
+        document.getElementById('upload-popup').style.display = 'block';
+        document.getElementById('upload-content-box').style.display = 'none';
+        fileInput.value = "";
+        document.getElementById('upload-status').innerText = "";
+        document.getElementById("file-name").innerText = "No file selected";
+    }
+    if(ws){
+        let statusText = document.getElementById('status');
+        let a=document.getElementById('ip-input');
+        a.value="";
+        let b=document.getElementById('ip-port');
+        b.value="";
+        ws.close();
+        statusText.innerText = "";
+        document.getElementById('ip-popup').style.display='block';
+        document.getElementById('ip-content-box').style.display='none';
+    }
+});
+
+function moveBar(button, index) {
+    // Remove 'active' class from all buttons
+    if(ws2){
+        ws2.close();
+        const fileInput = document.getElementById('file-input');
+        // statusText.innerText = "";
+        document.getElementById('upload-popup').style.display = 'block';
+        document.getElementById('upload-content-box').style.display = 'none';
+        fileInput.value = "";
+        document.getElementById('upload-status').innerText = "";
+        document.getElementById("file-name").innerText = "No file selected";
+    }
+    if(ws){
+        let statusText = document.getElementById('status');
+        let a=document.getElementById('ip-input');
+        a.value="";
+        let b=document.getElementById('ip-port');
+        b.value="";
+        ws.close();
+        statusText.innerText = "";
+        document.getElementById('ip-popup').style.display='block';
+        document.getElementById('ip-content-box').style.display='none';
+    }
+    document.querySelectorAll('.ctn-btn').forEach(btn => btn.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    button.classList.add('active');
+
+    // Move the bar to the clicked button
+    const bar = document.querySelector('.moving-bar');
+    bar.style.width = `${button.offsetWidth}px`; // Match bar width to button
+    bar.style.left = `${button.offsetLeft}px`; // Position bar under the button
+
+    // Scroll to the corresponding box based on index
+    const targetBox = document.getElementById(`box${index + 1}`);
+    targetBox.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the box
+}
+
+
+window.onload = initializeBar;
+
+        </script>
+    </body>
+</html>
